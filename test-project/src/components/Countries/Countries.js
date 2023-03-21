@@ -12,7 +12,7 @@ const Countries = () => {
   }, []);
   return (
     <div className="grp">
-      {countries.map(country => <Country name={country.name.common} population={country.population} ></Country>)}
+      {countries.map(country => <Country country={country} key={country.cca3}></Country>)}
     </div>
   );
 };
