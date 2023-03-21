@@ -1,3 +1,26 @@
-.heading{
-    background-color: bisque;
+.heading {
+  background-color: bisque;
+}
+.grp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 1200px) {
+  .grp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .grp {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }

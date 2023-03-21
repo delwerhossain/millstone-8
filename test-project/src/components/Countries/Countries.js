@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Country from "../Country/Country";
 import "./Countries.css";
 
 const Countries = () => {
@@ -10,8 +11,8 @@ const Countries = () => {
       .catch((err) => console.error(err));
   }, []);
   return (
-    <div>
-      <h1 className="heading">{countries.map(country => <h1>{country.name.common}</h1>)}</h1>
+    <div className="grp">
+      {countries.map(country => <Country name={country.name.common} population={country.population} ></Country>)}
     </div>
   );
 };
