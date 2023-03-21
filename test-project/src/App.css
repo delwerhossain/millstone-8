@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.post {
+  background-color: #61dafb;
+  margin: 40px;
+  border: solid 1px black;
+  border-radius: 15px;
+  
+
+}

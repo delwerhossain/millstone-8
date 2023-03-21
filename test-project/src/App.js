@@ -1,21 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
 const teachers = { name: 'rakib', title: 'mr', job: 'teacher' }
-const styleT = {color: 'red'} 
+const styleT = { color: 'red' } 
+
+
+// application
 function App() {
   return (
     <div className="App">
-     <Post name={teachers.name} ></Post>
+     <Post name ='chcek-props' ></Post>
     </div>
   );
 }
 
-const Post = () => { 
+// custom components
+const Post = (props) => { 
+  const arry = ["dos","dom","test","lox"]
   return (
-    <div>
+    <div className='post'>
       <h1 style= {styleT} >name : {teachers.name}</h1> 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto quibusdam itaque temporibus autem harum assumenda facere officiis a perspiciatis error! Sit laudantium alias facere illo est amet earum nemo atque, dignissimos, dolor voluptates porro ipsam quia ipsa eum rerum adipisci.</p>
+      <p>props:{props.name}</p>
+      <p>arry: {arry.map(sin => <li>{sin}</li>)}</p>
+      {/* <p>teachers : {teachers.forEach(item => <li>{item}</li> )}</p> */}
+      
     </div>
   );
 }
+
+
 export default App;
