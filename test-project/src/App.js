@@ -1,73 +1,72 @@
 // import logo from './logo.svg';
 import { useEffect, useState } from "react";
 import "./App.css";
+import Header from "./components/Header/Header";
 
 // application
 function App() {
   return (
     <div className="App">
-      <Counter></Counter>
-      <Posts></Posts>
+      <Header></Header>
+      {/* <Counter></Counter>
+      <Posts></Posts> */}
     </div>
   );
 }
 
+// function Posts() {
+//   const [user, setUser] = useState([]);
+//   useEffect(() => {
+//     fetch("https://jsonplaceholder.typicode.com/posts")
+//       .then((response) => response.json())
+//       .then((data) => setUser(data))
+//       .catch((err) => console.error(err));
+//   }, []);
 
+//   return (
+//     <div>
+//       <h1> from Posts : </h1>
+//       {user.map((user) => {
+//         return (
+//           <div>
+//             {" "}
+//             {console.log(user)}
+//             <Users title={user.title} body={user.body} id={user.id}></Users>
+//           </div>
+//         );
+//       })}
+//     </div>
+//   );
+// }
 
-function Posts() {
-  const [user, setUser] = useState([]);
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((data) => setUser(data))
-      .catch((err) => console.error(err));
-  }, []);
+// function Users(props) {
+//   return (
+//     <div>
+//       <h1>{props.id}</h1>
+//       <h2>{props.title}</h2>
+//       <p> {props.body} </p>
+//     </div>
+//   );
+// }
 
-  return (
-    <div> 
-      <h1> from Posts : </h1>
-   {user.map(user => {
-     return (
-       <div> {console.log(user)}
-         <Users title={user.title} body={user.body } id={user.id } ></Users> 
-         </div> 
-      );
-   })}
-    </div>  
-  );
-}
-
-function Users(props) {
-  return (
-    <div>
-      <h1>{props.id }</h1>
-      <h2>{props.title }</h2>
-      <p> {props.body } </p>
-    </div>
-  )
-}
-
-
-
-
-function Counter() {
-  const [count, setCount] = useState(0);
-  const increseCounter = () => {
-    let newcount = count + 1;
-    setCount(newcount);
-  };
-  const decreseCounter = () => {
-    let newcount = count - 1;
-    setCount(newcount);
-  };
-  return (
-    <div>
-      <h1>count{count}</h1>
-      <button onClick={increseCounter}> increseCounter</button>
-      <button onClick={decreseCounter}> increseCounter</button>
-    </div>
-  );
-}
+// function Counter() {
+//   const [count, setCount] = useState(0);
+//   const increseCounter = () => {
+//     let newcount = count + 1;
+//     setCount(newcount);
+//   };
+//   const decreseCounter = () => {
+//     let newcount = count - 1;
+//     setCount(newcount);
+//   };
+//   return (
+//     <div>
+//       <h1>count{count}</h1>
+//       <button onClick={increseCounter}> increseCounter</button>
+//       <button onClick={decreseCounter}> increseCounter</button>
+//     </div>
+//   );
+// }
 
 // const teachers = { name: "rakib", title: "mr", job: "teacher" };
 // const styleT = { color: "red" };
