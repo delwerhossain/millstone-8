@@ -1,15 +1,14 @@
 // import logo from './logo.svg';
 import { useEffect, useState } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
+import Countries from "./components/Countries/Countries";
+// import Header from "./components/Header/Header";
 
 // application
 function App() {
   return (
     <div className="App">
-      <Header></Header>
-      {/* <Counter></Counter>
-      <Posts></Posts> */}
+      <Countries></Countries>
     </div>
   );
 }
