@@ -14,7 +14,7 @@ function App() {
   );
 }
 function Tailwind() {
-  return <h1 className="text-3xl">form Tailwind </h1> 
+  return <h1 className="text-3xl heading">form Tailwind </h1> 
 }
 
 // function Posts() {
