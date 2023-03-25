@@ -1,14 +1,18 @@
 const addtoCard = (id) =>{
     let  shopArry = []
-    let shopExst =localStorage.getItem('shopping')
+    id = 'product-' + id;
+    let addcardCount = 0;
+    let shopExst =localStorage.getItem(id)
+    
     if (shopExst) {
-        shopArry.push(id);
-        console.log(shopArry);
+        addcardCount ++;
+        localStorage.setItem( id, addcardCount)
     }
     else{
-       localStorage.setItem('shopping' , shopArry)
+       localStorage.setItem('shopping' , JSON.stringify(shopArry))
        console.log('done set');
     }
+
 
 }
 
