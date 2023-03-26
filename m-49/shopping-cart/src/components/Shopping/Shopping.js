@@ -46,6 +46,12 @@ const removeAll = () => {
   }
 };
 
-const getTotal = () => {};
+const getTotal = () => {
+    // let storagedata = localStorage.getItem("shoppingCart");
+    // let convert = JSON.parse(storagedata);
+    
+    // document.getElementById("total-data").innerText = '00'
+    // console.log(typeof convert , convert);
+};
 
 export { addtoCard, removeCart, getTotal, removeAll };

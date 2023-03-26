@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Shopping from './components/Shopping/Shopping.jsx'
+import {Shopping, Total} from './components/Shopping/Shopping.jsx' 
 import { removeAll }  from './components/Shopping/Shopping.js'
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
   return (
     <div className="App">
       <h1 className='text-red-500'> Shopping Cart </h1>
-      <button onClick={()=>removeAll()} className='text-2xl  bg-slate-500 mx-4 my-4 text-stone-50'>remove All</button>
+      <button onClick={() => removeAll()} className='text-2xl  bg-slate-500 mx-4 my-4 text-stone-50'>remove All</button>
+      <Total></Total>
      <Shopping></Shopping> 
 
     </div>

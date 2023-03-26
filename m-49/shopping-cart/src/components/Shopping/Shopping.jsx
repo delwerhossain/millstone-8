@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { addtoCard, removeCart } from "./Shopping";
+import { addtoCard, getTotal, removeCart } from "./Shopping";
 // import addtoCard from './Shopping.js'
-
+getTotal()
 const Shopping = () => {
     
   const [shops, setShop] = useState([]);
@@ -31,4 +31,12 @@ const Shopping = () => {
   );
 };
 
-export default Shopping;
+const Total = () => {
+  return (
+    <>
+    <h1>total data : <span id="total-data"> </span></h1>
+    </>
+  )
+}
+
+export { Shopping ,Total} ;
