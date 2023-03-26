@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { addtoCard } from "./Shopping";
+import { addtoCard, removeCart } from "./Shopping";
 // import addtoCard from './Shopping.js'
 
 const Shopping = () => {
@@ -23,7 +23,7 @@ const Shopping = () => {
             <p> <span className="font-bold text-xl">details :</span>  {description.slice(31)}</p>
             <h4><span className="font-bold text-xl">price :</span>  {price}</h4> <p>product code : {id}</p>
             <button className="text-2xl  bg-slate-500 mx-4 my-4 text-stone-50" onClick={()=>addtoCard(id)}> AddToCard</button>
-            <button className="text-2xl  bg-slate-500 mx-4 my-4 text-stone-50" onClick={()=>addtoCard(id)}> Remove</button>
+            <button className="text-2xl  bg-slate-500 mx-4 my-4 text-stone-50" onClick={()=>removeCart(id)}> Remove</button>
           </div>
         );
       })}
