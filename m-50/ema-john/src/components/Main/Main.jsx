@@ -9,8 +9,7 @@ const Main = () => {
         <Card></Card>
       </div>
       <div className="bg-red-200 col-span-1">
-      <h1>card</h1>
-
+        <h1>card</h1>
       </div>
     </div>
   );
