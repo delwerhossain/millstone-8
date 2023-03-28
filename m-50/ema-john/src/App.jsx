@@ -1,20 +1,19 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/Header/Header'
-import Main from './components/Main/Main'
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <div className='relative mb-14'>
-     <Header></Header>
-
+      <div className="relative mb-14">
+        <Header></Header>
       </div>
-     <Main></Main>
+      <Main></Main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

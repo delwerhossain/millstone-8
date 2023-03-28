@@ -14,7 +14,7 @@ const Main = () => {
         <Card cartPart={cartPart}></Card>
       </div>
       <div className="h-screen p-2  bg-red-200 text-black text-center col-span-1 flex flex-col gap-2 relative ">
-       <CardDetails></CardDetails>
+       <CardDetails carts={carts} ></CardDetails>
       </div>
     </div>
   );
