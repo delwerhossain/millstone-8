@@ -24,7 +24,7 @@ const Card = (props) => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 gap-4 m-4">
       {products.map((product) => <Product carts={carts}  data={product} addCart={addCart} key={product.id}></Product>)}
     </div>
   );
