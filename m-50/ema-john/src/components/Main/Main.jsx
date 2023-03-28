@@ -9,11 +9,11 @@ const Main = () => {
   };
 
   return (
-    <div className="bg-slate-300 grid grid-cols-5 gap-3">
-      <div className="col-span-4 bg-blue-200">
+    <div className="bg-slate-300 grid lg:grid-cols-5 grid-cols-3 gap-3">
+      <div className="lg:col-span-4 col-span-2 bg-blue-200">
         <Card cartPart={cartPart}></Card>
       </div>
-      <div className="h-screen p-2  bg-red-200 text-black text-center col-span-1 flex flex-col gap-2 relative ">
+      <div className="h-screen p-2  bg-red-200 text-black text-center col-span-1 flex flex-col gap-2 relative mr-2">
        <CardDetails carts={carts} ></CardDetails>
       </div>
     </div>
