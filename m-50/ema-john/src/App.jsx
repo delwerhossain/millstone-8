@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="relative mb-14">
+      <div className="mb-14">
         <Header></Header>
       </div>
       <Main></Main>

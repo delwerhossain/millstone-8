@@ -1,12 +1,12 @@
 import React from "react";
 
 const Product = (props) => {
-  const { id, price, img, name, ratings, seller, ratingsCount ,shipping} = props.data;
+  const { id, price, img, name, ratings, seller, ratingsCount ,shipping ,quantity} = props.data;
   // console.log(img);
 
   const addCart = props.addCart
   const carts = props.carts
-
+console.log(quantity);
   return (
     <div className="text-black bg-white rounded-lg  relative">
      <div className="m-2">
