@@ -29,20 +29,32 @@ const Card = (props) => {
     setCarts(savedProduct);
     // cartPart(savedProduct)
   }, [products]);
-
+  // console.log('main carts :',carts);
+  
   const addCart = (product) => {
-    const newCarts = [...carts, product];
+    let newCarts = []
+    const exist = products.find(pd => pd.id === product.id);
+    if (!exist) {
+      product.quantity = 1 
+      newCarts = [...carts, product];      
+    }
+    else {
+      exist.quantity = exist.quantity + 1
+      const remaining = carts.find(pd => pd.id !== product.id)      
+      newCarts = [...carts, remaining];      
+    }
+
     setCarts(newCarts);
     // cartPart(newCarts);
     addToDb(product.id);
   };
-  // cartPart(carts)
+  // cartPart(newCarts)
 
   return (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-4 gap-6 m-4">
       {products.map((product) => (
         <Product
-          cartPart={cartPart }
+          cartPart={cartPart}
           carts={carts}
           data={product}
           addCart={addCart}

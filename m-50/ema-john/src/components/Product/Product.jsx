@@ -8,7 +8,7 @@ const Product = (props) => {
   const carts = props.carts
   const cartPart = props.cartPart
   cartPart(carts)
-// console.log(carts);
+  // console.log('product carts :',carts);
   return (
     <div className="text-black bg-white rounded-lg  relative">
      <div className="m-2">
