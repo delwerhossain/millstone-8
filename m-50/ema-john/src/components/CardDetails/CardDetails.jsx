@@ -5,17 +5,18 @@ const CardDetails = ({ carts }) => {
   let totalShipping = 0;
   let quantity = 0;
   for (let cart of carts) {
-    // if (cart) {
+    if (cart) {
     console.log(cart);
     // if (cart.quantity === 0) {
     //   cart.quantity = 1
     // }
-    cart.quantity = cart.quantity || 1;
-    total = total + cart.price * cart.quantity;
+
+    cart.quantity = cart?.quantity || 1;
+    total = total + cart.price * cart?.quantity;
     totalShipping = totalShipping + cart.shipping;
-    quantity = quantity + cart.quantity;
+    quantity = quantity + cart?.quantity;
       
-    // }
+    }
   }
   let tax = (total * 7) / 100;
   let grandTotal = total + totalShipping + tax;
