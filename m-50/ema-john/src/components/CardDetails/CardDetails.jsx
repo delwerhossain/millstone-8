@@ -1,16 +1,21 @@
 import React from "react";
 
-const CardDetails = ({carts}) => {
+const CardDetails = ({ carts }) => {
+  console.log(carts);
     // const { id, price, img, name, ratings, seller, ratingsCount } = carts
   let total = 0;
   let totalShipping = 0;
+  
+  let quantity = 0;
   // console.log(carts);
     for (let cart of carts){
         total = total + cart.price
-        totalShipping = totalShipping + cart.shipping
+      totalShipping = totalShipping + cart.shipping
+      quantity = quantity + cart.quantity
   }
   let tax = total * 7 / 100
   let grandTotal = total + totalShipping + tax
+  console.log(quantity);
     // const shipping =  (carts[cart].shipping).reduce((total, number) => total + number, 0);
     // const price    =  (carts[cart].price).reduce((total, number) => total + number, 0);
 

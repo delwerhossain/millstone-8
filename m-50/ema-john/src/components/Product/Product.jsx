@@ -6,7 +6,9 @@ const Product = (props) => {
 
   const addCart = props.addCart
   const carts = props.carts
-console.log(quantity);
+  const cartPart = props.cartPart
+  cartPart(carts)
+// console.log(carts);
   return (
     <div className="text-black bg-white rounded-lg  relative">
      <div className="m-2">
