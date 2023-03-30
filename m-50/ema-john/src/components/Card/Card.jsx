@@ -34,6 +34,7 @@ const Card = (props) => {
   const addCart = (product) => {
     let newCarts = []
     const exist = products.find(pd => pd.id === product.id);
+    console.log(id);
     if (!exist) {
       product.quantity = 1 
       newCarts = [...carts, product];      
