@@ -1,29 +1,30 @@
-import React from 'react';
+import React from "react";
 
-const Cards = () => {
-    return (
-        <div className='grid grid-cols-3'>
-            <div className="card w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img
-            src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">
-            Shoes!
-            <div className="badge badge-secondary">NEW</div>
-          </h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline">Fashion</div>
-            <div className="badge badge-outline">Products</div>
-          </div>
+const Cards = ({ product, addtoCart }) => {
+  const { id, title, price, image, rating, category, description } = product;
+
+  return (
+    <div className="card-side rounded-lg w-11/12 bg-white shadow-xl my-4">
+      <figure>
+        <div className="mx-4 my-4">
+          <img className="md:h-auto w-11/12 " src={image} alt={title} />
+        </div>
+      </figure>
+      <div className="card-body">
+        <h2 className="card-title">
+          {title.slice(0, 20)}
+          <div className="badge badge-secondary">NEW</div>
+        </h2>
+              <p>{description.slice(0, 100)}</p>
+              <button onClick={()=>addtoCart(id)} className="btn"></button>
+        <div className="card-actions justify-end">
+          <div className="badge badge-outline">Rating : {category}</div>
+
+          <div className="badge badge-outline">rating : {rating.rate}</div>
         </div>
       </div>
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Cards;

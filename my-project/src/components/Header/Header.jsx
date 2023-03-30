@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 fixed z-20">
         <div className="flex-1">
           <a className="btn btn-ghost normal-case text-xl">Project</a>
         </div>
@@ -13,7 +13,7 @@ const Header = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
               </div>
             </label>
             <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
