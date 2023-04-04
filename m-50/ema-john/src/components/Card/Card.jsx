@@ -31,17 +31,17 @@ const Card = (props) => {
   }, [products]);
   // console.log('main carts :',carts);
   
-  const addCart = (product) => {
+  const addCart = (product) => { 
     let newCarts = []
-    const exist = products.find(pd => pd.id === product.id);
-    console.log(id);
+    const exist = products.find(pd => pd.id === product[0].id);
+    console.log(products ,product);
     if (!exist) {
-      product.quantity = 1 
+      product[0].quantity = 1 
       newCarts = [...carts, product];      
     }
     else {
       exist.quantity = exist.quantity + 1
-      const remaining = carts.find(pd => pd.id !== product.id)      
+      const remaining = carts.find(pd => pd.id !== product[0].id)      
       newCarts = [...carts, remaining];      
     }
 
